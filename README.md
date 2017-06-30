@@ -21,3 +21,21 @@
 [Back End Repo](https://github.com/jross111/Crypvestor)
 ---
 [Front End Repo](https://github.com/jross111/FE-Cryptrader-React)
+
+
+user_table:
+  -username
+has_many: transactions
+
+account:
+-user_id: foreign_key
+-usd: decimal
+-btc: decimal
+
+  belongs_to: user
+
+transaction table:
+-user_id: foreign_key
+-usd_change: decimal
+-btc_change: decimal
+-approved: boolean
