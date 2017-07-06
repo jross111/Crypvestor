@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  username: MyString
-  usd_balance: 9.99
-  btc_balance: 9.99
+  first_name: MyString
+  last_name: MyString
+  user_name: MyString
 
 two:
-  username: MyString
-  usd_balance: 9.99
-  btc_balance: 9.99
+  first_name: MyString
+  last_name: MyString
+  user_name: MyString

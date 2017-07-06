@@ -2,10 +2,6 @@
 
 one:
   user_id: 1
-  currency_id: 1
-  balance: 9.99
 
 two:
   user_id: 1
-  currency_id: 1
-  balance: 9.99

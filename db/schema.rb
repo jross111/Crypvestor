@@ -10,15 +10,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170705163008) do
+ActiveRecord::Schema.define(version: 20170706125053) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "accounts", force: :cascade do |t|
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "currencies", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "currency_accounts", force: :cascade do |t|
+    t.integer "account_id"
+    t.integer "currency_id"
+    t.decimal "balance"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "transactions", force: :cascade do |t|
+    t.integer "origin_currency_account"
+    t.integer "destination_currency_account"
+    t.decimal "origin_currency_ammount"
+    t.decimal "destination_currency_ammount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.decimal "usd_balance", default: "1000.0"
-    t.decimal "btc_balance", default: "0.0"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "user_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

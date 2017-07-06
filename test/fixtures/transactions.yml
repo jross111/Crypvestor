@@ -1,15 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  user_id: 1
-  debit_currency: 1
-  credit_currency: 1
-  debit_ammount: 9.99
-  credit_ammount: 9.99
+  origin_currency_account: 1
+  destination_currency_account: 1
+  origin_currency_ammount: 9.99
+  destination_currency_ammount: 9.99
 
 two:
-  user_id: 1
-  debit_currency: 1
-  credit_currency: 1
-  debit_ammount: 9.99
-  credit_ammount: 9.99
+  origin_currency_account: 1
+  destination_currency_account: 1
+  origin_currency_ammount: 9.99
+  destination_currency_ammount: 9.99
