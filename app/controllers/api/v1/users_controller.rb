@@ -2,6 +2,7 @@ class Api::V1::UsersController < ApplicationController
 
 	def index
 		@users =User.order(:id)
+		# @accounts = Accounts.order(:id)
 		render json: @users
 	end
 
@@ -10,12 +11,16 @@ class Api::V1::UsersController < ApplicationController
 		render json: user
 	end
 
+	def create 
+		user = User.create(user_params)
+	end
+
 
 
 	private
 
 	def user_params
-		params.require(:user).permit(:username, :usd_balance, :btc_balance)
+		params.require(:user).permit(:username, :first_name, :last_name)
 	end
 
 end

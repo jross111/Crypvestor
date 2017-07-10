@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       resources :transactions
       resources :accounts
       resources :currency_accounts
+      resources :users 
 
 
     end
